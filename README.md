@@ -1,6 +1,9 @@
 # grunt-autoupdate
 
 > Auto updates the node_modules folder if the package.json version changed.
+If your node_modules are not under version control, then you would probably have to notify the team that the package.json changed and everyone would have to run "npm update". While this workflow could work, this is not very reliable!
+This task will help you remediate this issue by providing a way to automatically run 'npm update' when the version in the package.json file changed.
+
 
 ## Getting Started
 This plugin requires Grunt.
