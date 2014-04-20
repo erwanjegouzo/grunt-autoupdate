@@ -1,9 +1,9 @@
 {
-  "name": "grunt-auto-update",
+  "name": "grunt-autoupdate",
   "version": "0.0.1-beta1",
   "description": "Auto updates the node_modules if the package.json version changed",
-  "homepage": "https://github.com/erwanjegouzo/grunt-auto-update",
-  "repository": "https://github.com/erwanjegouzo/grunt-auto-update",
+  "homepage": "https://github.com/erwanjegouzo/grunt-autoupdate",
+  "repository": "https://github.com/erwanjegouzo/grunt-autoupdate",
   "author": {
     "name": "Erwan Jegouzo",
     "email": "",
