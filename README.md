@@ -20,6 +20,8 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-autoupdate');
 ```
 
+
+
 ## The "autoupdate" task
 
 ### Overview
@@ -46,7 +48,6 @@ The path to the cached file, which holds the previous version of the package.
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
 
 ```js
 grunt.initConfig({
@@ -54,6 +55,10 @@ grunt.initConfig({
     options: {}
   },
 })
+```
+
+```
+grunt.registerTask('default', ['autoupdate']);
 ```
 
 ## Contributing

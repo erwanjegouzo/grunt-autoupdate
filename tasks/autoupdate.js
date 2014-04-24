@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('autoupdate', 'Auto updates the node_modules if the package.json version changed', function () {
-    
+
     var options = this.options({
       pkgFile : '.pck'
     });
@@ -27,15 +27,17 @@ module.exports = function (grunt) {
     grunt.file.write(options.pkgFile, pkgVersion);
 
     if( previousPkgVersion != pkgVersion ){
-      grunt.log.writeln('New package.json version detected (from '+previousPkgVersion+' to '+pkgVersion+')');
-
-      
+      grunt.log.subhead('New package.json version detected (from '+previousPkgVersion+' to '+pkgVersion+')');
       grunt.log.writeln('Running npm update...');
-    
+
       var shelljs = require('shelljs');
       shelljs.exec('npm update', { silent : true });
-    
+
       grunt.log.writeln('... done!');
+      var command = 'grunt ' + process.argv.splice(2, process.argv.length).join(' ');
+      grunt.log.ok('Please run \''+ command +'\' again');
+    }else{
+      grunt.verbose.writeln('package.json was not updated');
     }
 
   });
