@@ -61,6 +61,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('shelljs');
 
   grunt.registerTask('test', ['clean', 'autoupdate', 'nodeunit']);
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['jshint']); //, 'test'
 
 };

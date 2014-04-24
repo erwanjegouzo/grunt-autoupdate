@@ -1,6 +1,6 @@
 {
   "name": "grunt-autoupdate",
-  "version": "0.0.1-beta1",
+  "version": "0.0.1-beta2",
   "description": "Auto updates the node_modules if the package.json version changed",
   "homepage": "https://github.com/erwanjegouzo/grunt-autoupdate",
   "repository": "https://github.com/erwanjegouzo/grunt-autoupdate",
@@ -24,14 +24,9 @@
     }
   ],
   "devDependencies": {
-    "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-nodeunit": "~0.3.0",
     "grunt": "~0.4.2",
     "shelljs": "0.2.6"
-  },
-  "scripts": {
-    "test": "grunt test"
   },
   "peerDependencies": {
     "grunt": "~0.4.2"
