@@ -1,4 +1,4 @@
-# grunt-autoupdate [![Build Status: Linux](https://travis-ci.org/erwanjegouzo/grunt-autoupdate.png?branch=master)](https://travis-ci.org/erwanjegouzo/grunt-autoupdate)
+# grunt-autoupdate [![Build Status: Linux](https://travis-ci.org/erwanjegouzo/grunt-autoupdate.png?branch=master)](https://travis-ci.org/erwanjegouzo/grunt-autoupdate) [![Dependency Status](https://david-dm.org/erwanjegouzo/grunt-autoupdate.png)](https://david-dm.org/erwanjegouzo/grunt-autoupdate.png)
 
 > Auto updates the node_modules folder if the package.json version changed.  
 Why? If your node_modules folder is not under version control, then you would probably have to notify the team that the package.json changed and everyone would have to run "npm update". While this workflow could work, this is not very reliable!  
