@@ -13,7 +13,7 @@ module.exports = function (grunt) {
   grunt.registerTask('autoupdate', 'Auto updates the node_modules if the package.json version changed', function () {
 
     var options = this.options({
-      pkgFile : '.pck'
+      pkgFile : '.pkg'
     });
 
     var previousPkgVersion = 'N/A',

@@ -25,28 +25,8 @@ module.exports = function (grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp']
+      tests: ['tmp', '.pkg']
     },
-
-    // Configuration to be run (and then tested).
-    // Grunt_Auto_Update: {
-    //   default_options: {
-    //     options: {
-    //     },
-    //     files: {
-    //       'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-    //     }
-    //   },
-    //   custom_options: {
-    //     options: {
-    //       separator: ': ',
-    //       punctuation: ' !!!'
-    //     },
-    //     files: {
-    //       'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-    //     }
-    //   }
-    // },
 
     // Unit tests.
     nodeunit: {
@@ -55,12 +35,14 @@ module.exports = function (grunt) {
 
   });
 
+
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('shelljs');
+  grunt.loadTasks('tasks/');
 
-  grunt.registerTask('test', ['clean', 'autoupdate', 'nodeunit']);
-  grunt.registerTask('default', ['jshint']); //, 'test'
+  grunt.registerTask('test', ['clean', 'nodeunit']); //, 'clean'
+  grunt.registerTask('default', ['jshint', 'test', 'clean']);
 
 };
