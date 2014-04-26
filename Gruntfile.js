@@ -43,6 +43,7 @@ module.exports = function (grunt) {
   grunt.loadTasks('tasks/');
 
   grunt.registerTask('test', ['clean', 'nodeunit']); //, 'clean'
+  grunt.registerTask('autoupdate-test', ['autoupdate', 'jshint']);
   grunt.registerTask('default', ['jshint', 'test', 'clean']);
 
 };

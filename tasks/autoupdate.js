@@ -39,6 +39,7 @@ module.exports = function (grunt) {
       var command = args.join(' ');
 
       grunt.log.ok('Please run \''+ command +'\' again');
+      grunt.util.exit(0);
     }else{
       grunt.verbose.writeln('package.json was not updated');
     }

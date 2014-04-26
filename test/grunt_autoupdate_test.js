@@ -28,19 +28,23 @@ exports.grunt_autoupdate = {
   },
 
   first_run: function(test){
-    test.expect(4);
+    test.expect(5);
     
     grunt.util.spawn({
       grunt: true,
-      args: ['autoupdate', '--no-color'],
+      args: ['autoupdate-test', '--no-color'],
     }, function(err, result) {
       test.ok(result.stdout.indexOf("New package.json version detected") !== -1, 'A new package.json version should have been detected');
       test.ok(result.stdout.indexOf('npm update') !== -1, 'npm update should be running');
       test.ok(result.stdout.indexOf('done!') !== -1, 'npm update should have been successfully executed');
 
+      // package version
       var actual = grunt.file.readJSON('package.json').version,
           expected = grunt.file.read('.pkg');
       test.equal(actual, expected, 'The package.json version stored matches the current package.json version');
+
+      // stops executing the next tasks
+      test.ok(result.stdout.indexOf('jshint') === -1, 'jshint should not be running');
 
       test.done();
     });
@@ -50,7 +54,7 @@ exports.grunt_autoupdate = {
     
     grunt.util.spawn({
       grunt: true,
-      args: ['autoupdate', '--no-color --verbose'],
+      args: ['autoupdate-test', '--no-color --verbose'],
     }, function(err, result) {
       test.ok(result.stdout.indexOf('New package.json version detected') === -1, 'If an existing .pkg file exists and the version was not bumped, npm update should not be executed');
       test.done();
