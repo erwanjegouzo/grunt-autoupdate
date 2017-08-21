@@ -1,4 +1,4 @@
-**/!\/!\This project is not maintained anymore/!\/!\**
+**Warning: This project is not maintained anymore!!**
 
 # grunt-autoupdate [![Build Status: Linux](https://travis-ci.org/erwanjegouzo/grunt-autoupdate.png?branch=master)](https://travis-ci.org/erwanjegouzo/grunt-autoupdate) [![Dependency Status](https://david-dm.org/erwanjegouzo/grunt-autoupdate.png)](https://david-dm.org/erwanjegouzo/grunt-autoupdate.png)
 
